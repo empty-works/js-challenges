@@ -5,8 +5,13 @@ const rl = readline.createInterface({
 });
  
 rl.question("Enter a year: ", (year) => {
-
-	
+	var isLeap = isLeapYear(year);
+	if(isLeap === true) {
+		console.log(year + " is a leap year.");
+	}
+	else {
+		console.log(year + " is not a leap year.");
+	}
 	rl.close();
 });
 
